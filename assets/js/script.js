@@ -334,7 +334,6 @@ btnClose.addEventListener('click', function (e) {
   }
 
   inputCloseUsername.value = inputClosePin.value = '';
-  currentAccount = null;
 });
 
 let sorted = false;
