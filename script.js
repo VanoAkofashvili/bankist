@@ -4,7 +4,6 @@
 /////////////////////////////////////////////////
 // BANKIST APP
 
-
 const account1 = {
   owner: 'John Doe',
   movements: [200, 455.23, -306.5, 25000, -642.21, -133.9, 79.97, 1300],
@@ -68,7 +67,6 @@ const account3 = {
 const accounts = [account1, account2, account3];
 
 ('use strict');
-
 
 // Elements
 const labelWelcome = document.querySelector('.welcome');
@@ -319,13 +317,12 @@ btnLoan.addEventListener('click', function (e) {
 
 btnClose.addEventListener('click', function (e) {
   e.preventDefault();
-
   if (
     inputCloseUsername.value === currentAccount.username &&
     +inputClosePin.value === currentAccount.pin
   ) {
     const index = accounts.findIndex(
-      acc => accounts.username === currentAccount.username
+      acc => acc.username === currentAccount.username
     );
 
     // Delete account
@@ -333,6 +330,7 @@ btnClose.addEventListener('click', function (e) {
 
     // Hide UI
     containerApp.style.opacity = 0;
+    labelWelcome.textContent = 'Log in to get started';
   }
 
   inputCloseUsername.value = inputClosePin.value = '';
