@@ -96,20 +96,6 @@ const inputLoanAmount = document.querySelector('.form__input--loan-amount');
 const inputCloseUsername = document.querySelector('.form__input--user');
 const inputClosePin = document.querySelector('.form__input--pin');
 
-//////////
-// EXPERIMENTING API
-const now = new Date();
-const options = {
-  hour: 'numeric',
-  minute: 'numeric',
-  day: 'numeric',
-  month: 'long',
-  year: 'numeric',
-  weekday: 'long',
-};
-const locale = navigator.language;
-labelDate.textContent = new Intl.DateTimeFormat(locale, options).format();
-
 const formatMovementDate = function (date, locale) {
   const calcDaysPassed = (date1, date2) =>
     Math.round(Math.abs((date2 - date1) / (1000 * 60 * 60 * 24)));
